@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide — Road to the Platinum | Leonida</title>
+<meta name="description" content="The complete offline GTA VI trophy guide: all 55 PlayStation 5 trophies, a 4-phase roadmap to the platinum, missable warnings, and a saved checklist tracker.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
+    <h1>GTA VI Trophy Guide</h1>
+    <p class="tagline">Every one of the 55 trophies, in order, with a plan to the platinum — and a checklist that remembers where you are.</p>
+    <div class="progress-wrap" aria-live="polite">
+      <div class="progress-text"><strong id="progress-count">0/55 earned</strong> <span id="progress-pct">0% to platinum</span></div>
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-sub" id="progress-sub">1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 0 of 55 earned so far</p>
+    </div>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" id="view-guide" class="view-btn active">Trophy guide</button>
+  <button type="button" id="view-roadmap" class="view-btn">Roadmap to platinum</button>
+</nav>
+
+<main>
+  <section id="roadmap-section" class="roadmap" hidden>
+    <h2>Roadmap to the Platinum</h2>
+    <p class="roadmap-intro">One playthrough, done in the right order. Follow the phases below and you will never have to replay the story for a trophy you missed. <strong id="roadmap-time">Estimated total: 60&ndash;90 hours</strong> &middot; <strong id="roadmap-diff">Overall difficulty: 3/5</strong> — the platinum is long, not hard.</p>
+    <ol class="phases" id="phases"></ol>
+    <p class="roadmap-note">Rule of thumb: finish every missable the first time you see it, save before every story mission with a one-time chance, and leave the open-world grind until after the credits — Leonida is still there.</p>
+  </section>
+
+  <section id="guide-section" aria-label="Trophy guide">
+    <div class="controls" role="search">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Search trophy name or description&hellip;" autocomplete="off"></label>
+      <label>Grade <select id="grade">
+        <option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option>
+      </select></label>
+      <label>Kind <select id="kind">
+        <option value="all">All kinds</option><option value="story">Story</option><option value="missable">Missable</option><option value="collectible">Collectible</option><option value="activity">Activity</option><option value="combat">Combat</option><option value="exploration">Exploration</option><option value="money">Money</option><option value="social">Social</option>
+      </select></label>
+      <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+      <label>Earned <select id="earned-filter">
+        <option value="all">All trophies</option><option value="earned">Earned</option><option value="not-earned">Not earned yet</option>
+      </select></label>
+      <label>Sort <select id="sort">
+        <option value="default">Default order</option><option value="difficulty">Difficulty (easiest first)</option><option value="time">Time (quickest first)</option>
+      </select></label>
+      <label class="check spoiler-check"><input id="spoiler" type="checkbox" checked> Hide story spoilers</label>
+    </div>
+
+    <div class="toolbar">
+      <p id="result-count" aria-live="polite">Loading trophies&hellip;</p>
+      <div class="toolbar-btns">
+        <button id="export" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
+        <button id="reset" type="button">Reset checklist</button>
+      </div>
+    </div>
+
+    <p class="hint">Tip: tick a trophy when you earn it — progress saves in this browser. Hidden story trophies stay masked while “Hide story spoilers” is on.</p>
+    <div id="detail" class="detail" hidden></div>
+    <ul id="trophy-list" class="trophy-list"></ul>
+    <p id="empty" class="empty" hidden>No trophies match these filters. Clear the search or loosen a filter.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games. Trophy names, descriptions and grades are as published by PlayStation; every guide step is written for this guide and cites its sources. Works fully offline — no network requests beyond loading the trophy data file.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
